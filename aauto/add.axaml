@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="750"
+        MaxHeight="500"
+        MaxWidth="400"
+        x:Class="aauto.add"
+        Title="add">
+    <Grid>
+                <Image Source="D:/apps/111/777.jpg" Width="510" Height="510"/>
+                <TextBlock Margin = "30 35 0 0" FontSize="20" FontWeight="Bold">Введите данные ниже: </TextBlock>
+                
+                <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 80 0 0">id </TextBlock>
+                                <TextBox Name="id" x:CompileBindings="False" Text="{Binding id}" Width="200" Height="5" Margin = "98 70 0 0"></TextBox>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">name </TextBlock>
+                                <TextBox Name="name" x:CompileBindings="False" Text="{Binding name}" Width="200" Height="5" Margin = "72 20 0 0"></TextBox>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">price: </TextBlock>
+                                <TextBox Name="price" x:CompileBindings="False" Text="{Binding price}" Width="200" Height="5" Margin = "72 20 0 0"></TextBox>
+                        </StackPanel>  
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">discount: </TextBlock>
+                                <TextBox Name="discount" x:CompileBindings="False" Text="{Binding discount}" Width="200" Height="5" Margin = "50 20 0 0"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">price_discount: </TextBlock>
+                                <TextBox Name="price_discount" x:CompileBindings="False" Text="{Binding price_discount}" Width="200" Height="5" Margin = "10 20 0 0"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">time_minutes: </TextBlock>
+                                <TextBox Name="time_minutes" x:CompileBindings="False" Text="{Binding time_minutes}" Width="200" Height="5" Margin = "20 20 0 0"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">photo: </TextBlock>
+                                <TextBox Name="photo" x:CompileBindings="False" Text="{Binding photo}" Width="200" Height="5" Margin = "70 20 0 0"></TextBox>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <Button Name="Save" Content="Сохранить" Background="White" Click="Save_OnClick" Margin = "20 15 0 20"></Button>
+                                <Button Name="Back" Content="Назад" Background="White" Click="GoBack" Margin = "30 15 0 20"></Button>
+                        </StackPanel>
+                </StackPanel>
+                
+        </Grid>
+</Window>

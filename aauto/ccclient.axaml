@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="750"
+        x:Class="aauto.ccclient"
+        MaxHeight="730"
+        MaxWidth="1000"
+        Title="ccclient">
+       
+        <Grid>
+                <Image Source="D:/apps/111/555.jpg" Width="1200" Height="840"/>
+                <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0"> Поиск по фамилии: </TextBlock>
+                                <TextBox Name="Search" Width="200" Margin ="10 10 0 0" TextChanged="Ssearch"></TextBox>
+                        </StackPanel>
+        
+                        <DataGrid Name="ClientGrid" x:CompileBindings="False" Margin ="0 10 0 0" Height="350" Width="1000">
+                                <DataGrid.Columns>
+                                        <DataGridTextColumn Header="id" Binding="{Binding id}"> </DataGridTextColumn>
+                                        <DataGridTextColumn Header="surname" Binding="{Binding surname}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="name" Binding="{Binding name}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="lastname" Binding="{Binding lastname}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="phone" Binding="{Binding phone}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="gender_id" Binding="{Binding gender_id}"> </DataGridTextColumn>
+                                </DataGrid.Columns>
+                        </DataGrid>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "10 35 0 0" FontWeight="Bold" >id: </TextBlock>
+                                <TextBox Name="id" x:CompileBindings="False" Text="{Binding id}" Width="200" Height="5" Margin = "10 25 0 0"></TextBox>
+                                <Button Name="Delete" Margin = "10 25 0 0" Content="Удалить" Background="White" Click="DeleteData"></Button>
+                                <Button Name="back" Margin = "50 20 0 0" Content="Назад" Background="LightBlue" Click="Back"></Button>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                
+                        </StackPanel>
+                </StackPanel>
+        </Grid>
+        
+</Window>

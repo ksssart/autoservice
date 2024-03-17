@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="aauto/App.axaml" value="aauto/aauto.csproj" />
+        <entry key="aauto/MainWindow.axaml" value="aauto/aauto.csproj" />
+        <entry key="aauto/add.axaml" value="aauto/aauto.csproj" />
+        <entry key="aauto/addOrder.axaml" value="aauto/aauto.csproj" />
+        <entry key="aauto/admin.axaml" value="aauto/aauto.csproj" />
+        <entry key="aauto/ccclient.axaml" value="aauto/aauto.csproj" />
+        <entry key="aauto/menu.axaml" value="aauto/aauto.csproj" />
+        <entry key="aauto/ordersForm.axaml" value="aauto/aauto.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

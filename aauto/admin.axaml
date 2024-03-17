@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="830"
+        x:Class="aauto.admin"
+        MaxHeight="830"
+        MaxWidth="1200"
+        Title="admin">
+    
+        <Grid>
+                <Image Source="D:/apps/111/555.jpg" Width="1200" Height="840"/>
+                <StackPanel Orientation="Vertical">
+            
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0"> Поиск по названию: </TextBlock>
+                                <TextBox Name="Search" Width="200" Margin ="10 10 0 0" TextChanged="Ssearch"></TextBox>
+                        </StackPanel>
+        
+                        <DataGrid Name="ServiceGrid" x:CompileBindings="False" Margin ="100 10 0 0" Height="500" Width="1000">
+                                <DataGrid.Columns>
+                                        <DataGridTextColumn Header="id" Binding="{Binding id}"> </DataGridTextColumn>
+                                        <DataGridTextColumn Header="name" Binding="{Binding name}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="price" Binding="{Binding price}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="discount" Binding="{Binding discount}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="price_discount" Binding="{Binding price_discount}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="time_minutes" Binding="{Binding time_minutes}"></DataGridTextColumn>
+                                        
+                                        <DataGridTemplateColumn Header="photo" Width="100">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <Image Source="{Binding photo}" />
+                                                        </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                        </DataGrid>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" Margin = "10 20 0 0" FontWeight="Bold">Фильтрация по скидке: </TextBlock>
+                                <ComboBox Name="CmbDost" Width="200" Margin ="10 20 0 0" 
+                                          x:CompileBindings="False"
+                                          SelectionChanged="Cmb_Dost">
+                                        <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                        <TextBlock Text="{Binding discount}"></TextBlock>
+                                                </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                </ComboBox>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "10 35 0 0" FontWeight="Bold" >id: </TextBlock>
+                                <TextBox Name="id" x:CompileBindings="False" Text="{Binding id}" Width="200" Height="5" Margin = "10 25 0 0"></TextBox>
+                                <Button Name="Delete" Margin = "10 25 0 0" Content="Удалить" Background="White" Click="DeleteData"></Button>
+                                <Button Name="back" Margin = "50 20 0 0" Content="Назад" Background="LightBlue" Click="Back"></Button>
+                        </StackPanel>
+                        
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <Button Name="Add" Margin = "10 20 0 0" Content="Добавить" Background="White" Click="AddData"></Button>
+                                <Button Name="Edit" Margin = "10 20 0 0" Content="Изменить" Background="White" Click="EditData"></Button>
+               
+                        </StackPanel>
+                        
+                </StackPanel>
+        </Grid>
+</Window>

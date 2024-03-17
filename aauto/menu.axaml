@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="aauto.menu"
+        MaxHeight="230"
+        MaxWidth="510"
+        Title="menu">
+    
+        <Grid>
+                <Image Source="D:/apps/111/333.jpg" Width="510" Height="250"/>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Выберите раздел:" FontSize="20" FontWeight="Bold" Foreground="Azure" Margin="10,-80,0,0"/>
+                </StackPanel>
+        
+                <StackPanel Orientation="Horizontal">              
+                        <Button Name="client" FontWeight="Bold" Content="        Клиенты" Background="Azure" Click="Client" Width="150" Height="50" Margin = "10 10 0 0"></Button>
+                        <Button Name="service" FontWeight="Bold" Content="            Услуги" Background="Azure" Click="Service" Width="150" Height="50" Margin = "10 10 0 0"></Button>
+                        <Button Name="Order" FontWeight="Bold" Content="            Записи" Background="Azure" Click="order" Width="150" Height="50" Margin = "10 10 0 0"></Button>
+        
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                        <Button Name="Back" Content="  Назад" Background="LightBlue" Click="back" Width="80" Height="30" Margin = "205 140 0 0"></Button>
+                </StackPanel>
+        </Grid>
+        
+</Window>

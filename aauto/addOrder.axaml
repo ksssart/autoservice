@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="aauto.addOrder"
+        MaxHeight="500"
+        MaxWidth="400"
+        Title="addOrder">
+    
+    
+         <Grid>
+                <Image Source="D:/apps/111/777.jpg" Width="510" Height="510"/>
+                <TextBlock Margin = "30 35 0 0" FontSize="20" FontWeight="Bold">Введите данные ниже: </TextBlock>
+                
+                <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 80 0 0">id </TextBlock>
+                                <TextBox Name="id" x:CompileBindings="False" Text="{Binding id}" Width="200" Height="5" Margin = "68 70 0 0"></TextBox>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">client_id </TextBlock>
+                                <TextBox Name="client_id" x:CompileBindings="False" Text="{Binding client_id}" Width="200" Height="5" Margin = "25 20 0 0"></TextBox>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">service_id: </TextBlock>
+                                <TextBox Name="service_id" x:CompileBindings="False" Text="{Binding service_id}" Width="200" Height="5" Margin = "10 20 0 0"></TextBox>
+                        </StackPanel>  
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin = "30 30 0 0">date: </TextBlock>
+                                <TextBox Name="date" x:CompileBindings="False" Text="{Binding date}" Width="200" Height="5" Margin = "48 20 0 0"></TextBox>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <Button Name="Save" Content="Сохранить" Background="White" Click="Save_OnClick" Margin = "20 15 0 20"></Button>
+                                <Button Name="Back" Content="Назад" Background="White" Click="GoBack" Margin = "30 15 0 20"></Button>
+                        </StackPanel>
+                </StackPanel>
+        </Grid>
+</Window>
